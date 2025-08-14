@@ -1,6 +1,6 @@
 context:
   name: tinytag
-  version: "2.1.1"
+  version: "2.1.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: b417d480cf3b0c2d60a3afef705b29ac0080fc72d35b0b579b64184c54ee394c
+  sha256: 564e573e308d9fa78432493b4987fca1f84fb1f2ce29c586fc54629155e4fca0
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
 tests:
   - python:
       imports:
-      - tinytag
+        - tinytag
       pip_check: true
       python_version: ${{ python_min }}.*
 
